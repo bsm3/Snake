@@ -9,7 +9,7 @@
 *		
 *	left = 'v'      right = 'm'
 *
-*			    down = 'n'
+*		 down = 'n'
 *	
 *	exit = 'e'
 */
