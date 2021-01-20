@@ -4,7 +4,7 @@
 * Linux: 
 * Tested under Fedora
 *
-*Keys to steer the snake:
+* Keys to steer the snake:
 *      		 up = 'h'
 *		
 *	left = 'v'      right = 'm'
