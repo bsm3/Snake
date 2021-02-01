@@ -30,7 +30,7 @@ int main(void)
 	{
 		printf("Select The game speed between 1 and 3: ");
 		scanf("%d", &speed);
-	}while(speed > 3);
+	}while(speed > 3 || speed < 1);
 	 speed *= 100000;
 
 	printf("\033[2J");
