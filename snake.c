@@ -6,7 +6,6 @@
 #include <fcntl.h>
 
 
-
 extern char arr[22][68], ch, cpy;
 extern int tailx[40], taily[40];
 extern int a, b, c, d, e, count, x, k, n, y, speed, obstx[5], obsty[5];
