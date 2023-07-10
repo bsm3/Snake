@@ -43,53 +43,96 @@ int kbhit(void)
 
 	return 0;
 }
+
 void keys(int *x, int *y)
 {
 	if(kbhit())
 	{
 		ch = getchar();
-		switch(ch)
+		if(ch == '\033')
 		{
-			case 'h':
-				c  = -1;
-				d = 0;
+			getchar();
+			ch = getchar();
+
+		    switch(ch)
+		    {
+				case 'A':
+						c  = -1;
+						d = 0;
+						if(cpy == 'D' || cpy == 'C')
+						{
+							if(speed == 375000)
+								speed -= 45000;
+
+							else
+								speed -= 50000;
+						}
 				break;
-			case 'n':
-				c = 1;
-				d = 0;
+
+				case 'B':
+					c = 1;
+					d = 0;
+
+						if(cpy == 'D' || cpy == 'C')
+						{
+							if(speed == 375000)
+								speed -= 45000;
+							else
+								speed -= 50000;
+						}
 				break;
-			case 'v':
-				c = 0;
-				d = -1;
+
+				case 'D':
+					c = 0;
+					d = -1;
+
+					if(cpy != 'D' && speed < 350000)
+					{
+						if(speed == 330000)
+							speed += 45000;
+						else
+							speed += 50000;
+					}
 				break;
-			case 'm':
-				c = 0;
-				d = 1;
+
+				case 'C':
+					c = 0;
+					d = 1;
+					if(cpy != 'C' && speed < 350000)
+					{
+						if(speed == 330000)
+							speed += 45000;
+						else
+							speed += 50000;
+					}
 				break;
-			case 'e':
-				e = 2;
+
+				default:
+					ch = cpy;
 				break;
-			default:
-				ch = cpy;
-				break;
+			}
+
 		}
-		if(cpy == 'm' && ch == 'v')
+		if(ch == 'e')
+			e = 2;
+
+		if(cpy == 'C' && ch == 'D')
 			e = 0;
 
-		else if(cpy == 'v' && ch == 'm')
+		else if(cpy == 'D' && ch == 'C')
 			e = 0;
 
-		else if(cpy == 'h' && ch == 'n')
+		else if(cpy == 'A' && ch == 'B')
 			e = 0;
 
-		else if(cpy == 'n' && ch == 'h')
+		else if(cpy == 'B' && ch == 'A')
 			e = 0;
 
 		cpy = ch;
 	}
-	
-	*x += d;	
-	*y += c;	
+
+	*x += d;
+	*y += c;
 }
 
 
