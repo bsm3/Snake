@@ -56,19 +56,20 @@ void keys(int *x, int *y)
 		    switch(ch)
 		    {
 				case 'A':
-						c  = -1;
-						d = 0;
-						if(cpy == 'D' || cpy == 'C')
-						{
-							if(speed == 375000)
-								speed -= 45000;
+					c  = -1;
+					d = 0;
+				
+					if(cpy == 'D' || cpy == 'C')
+					{
+						if(speed == 375000)
+							speed -= 45000;
 
-							else
-								speed -= 50000;
-						}
+						else
+							speed -= 50000;
+					}
 				break;
 
-				case 'B':
+			case 'B':
 					c = 1;
 					d = 0;
 
