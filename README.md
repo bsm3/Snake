@@ -2,7 +2,7 @@
 
 A simple console snake game...
 
-Keys to steer the snake: up = 'h', left = 'v', right = 'm', down = 'n'
+Keys to steer the snake: up = 🡅, left = 🡄, right = 🡆, down = 🡇
 
 exit = 'e'
 
