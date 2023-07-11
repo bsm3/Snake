@@ -5,11 +5,11 @@
 * Tested under Fedora
 *
 * Keys to steer the snake:
-*      		 up = 'h'
+*      		 up = 🡅
 *		
-*	left = 'v'      right = 'm'
+*	left = 🡄       right = 🡆
 *
-*		 down = 'n'
+*		 down = 🡇
 *	
 *	exit = 'e'
 */
