@@ -19,7 +19,7 @@
 #include "snake.h"
 
 char arr[22][68] = {{0}}, ch, cpy;
-int tailx[40], taily[40];
+int tailx[560], taily[560];
 int a, b, c = 0, d = 0, e = 1, count = 0, n = 22, k = 68, speed, x = 20, y = 10, obstx[] = {10, 40, 4, 24, 50}, obsty[] = {4, 7, 11, 16, 17};
 
 int main(void)
